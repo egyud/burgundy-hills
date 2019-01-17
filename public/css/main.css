@@ -1,0 +1,302 @@
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+}
+
+/* header stuff */
+
+header {
+    /* position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; */
+    grid-area: 1/1/2/13;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(160, 160, 160, 0.8);
+    color: white;
+    z-index: 100;
+}
+
+.header__home {
+    margin-left: 1rem;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.header__nav li {
+    padding: 1rem;
+}
+
+.header__nav li:hover {
+    padding: 1rem;
+    background-color: gray;
+}
+
+/* banner stuff */
+
+.banner {
+    grid-area: 1/1/3/13;
+    background: url('../images/building.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.banner>h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    margin-top: 4.5rem;
+}
+
+.banner__button {
+    background-color: rgba(218, 205, 205, 0.5);
+    padding: 1.7rem 2rem;
+    font-size: 2rem;
+    margin: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+.banner__button:hover {
+    background-color: rgba(229, 255, 0, 0.5);
+}
+
+.banner__button ul {
+    margin-top: .7rem;
+    list-style-type: circle;
+}
+
+
+.banner__button li {
+    font-size: .8rem;
+}
+
+/* other */
+
+.map {
+    grid-area: 3/1/4/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    height: 400px;
+}
+
+/* .map img {
+    width: 60%;
+    height: auto;
+    margin-top: 2rem;
+} */
+
+.info {
+    grid-area: 3/6/4/13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info p {
+    line-height: 1.3rem;
+    margin-right: 2rem;
+}
+
+
+/* footer */
+
+footer {
+    grid-area: 4/1/5/13;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(160, 160, 160);
+}
+
+.footer__address {
+    display: flex;
+    flex-flow: column;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+footer img {
+    max-width: 130px;
+    height: auto;
+    padding: 0.5rem auto;
+}
+
+.footer__hours {
+    display: flex;
+    flex-flow: column;
+    margin-right: 1rem;
+}
+
+.footer__hours li {
+    font-weight: 300;
+}
+
+/* Log in form */
+
+.login__grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.login__grid > h1 {
+    grid-area: 1/1/2/3;
+    font-size: 3rem;
+    color: gray;
+    text-shadow: 2px 2px 5px black;
+    margin: 3rem 0;
+}
+
+/* .login__layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+} */
+
+.login__form {
+    grid-area: 2/1/3/2;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    background: #eee;
+    width: 300px;
+    border: 1px solid rgb(160, 160, 160);
+    padding: 1.5rem;
+}
+
+.login__form > input {
+    font-size: 1rem;
+    padding: 0.42rem 0.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.login__form > button {
+    padding: 0.85rem 1rem;
+    background-color: blue;
+    color: white;
+    margin-bottom: 0.2rem;
+}
+
+.login__form > a {
+    color: #0000EE;
+    font-size: 0.9rem;
+    padding-top: 0.2rem;
+}
+
+.login__info {
+    grid-area: 2/2/3/3;
+    place-self: start;
+}
+
+.login__info > h3 {
+    font-size: 2rem;
+    color: rgb(160, 160, 160);
+    padding: 1rem 0;
+}
+
+
+/* Contact Page */
+
+.contact__form {
+    background: #eee;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    width: 500px;
+    grid-gap: 1rem;
+    margin: auto;
+}
+
+.contact__form > * {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0.4rem 0.5rem;
+}
+
+.contact__form > h1 {
+    grid-area: 1/1/2/3;
+}
+
+.contact__first {
+    grid-area: 2/1/3/2;
+}
+
+.contact_last {
+    grid-area: 2/2/3/3;
+}
+
+.contact__email {
+    grid-area: 3/1/4/3;
+}
+
+.contact__phone {
+    grid-area: 4/1/5/3;
+}
+
+.contact__message {
+    grid-area: 5/1/6/3;
+}
+
+.contact__form > button {
+    grid-area: 6/1/7/3;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Photo Gallery Page */
+
+.photo__title {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    margin: 3rem auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.photo__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    grid-auto-rows: repeat(130px, auto);
+    width: 80%;
+    height: 100%;
+    margin: 3rem auto;
+    grid-gap: 1.4rem;
+}
+
+.photo__grid img {
+    width: 255px;
+    height: 130px;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 3rem;
+}

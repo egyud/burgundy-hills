@@ -1,0 +1,24 @@
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <div class="login__grid">
+        <h1>Resident Portal</h1>
+        <form class="login__form" action="" method="POST">
+            <input type="email" name="email" id="" placeholder="Email">
+            <input type="password" name="password" id="" placeholder="Password">
+            <button type="submit">Sign In</button>
+            <a href="">Forgot password?</a>
+            <a href="">Click here to register.</a>
+            <a href="">Send Verification Email</a>
+        </form>
+        <section class="login__info">
+            <h3>Make Payments</h3>
+            <p>Pay online, check the status of your payments and review your payment history.</p>
+            <h3>Maintenance Requests</h3>
+            <p>Submit online maintenance requests.</p>
+        </section>
+    </div>
+
+
+<%- include('includes/footer.ejs') %>
