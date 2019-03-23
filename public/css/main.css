@@ -31,11 +31,19 @@ header {
 
 .header__nav li {
     padding: 1rem;
+    /* flex: 1; */
 }
 
 .header__nav li:hover {
     padding: 1rem;
     background-color: gray;
+}
+
+@media(max-width: 599px) {
+    .grid-container {
+        display: flex;
+        flex-flow: column;
+    }
 }
 
 /* banner stuff */
@@ -82,13 +90,18 @@ header {
 
 /* other */
 
-.map {
+.map-wrapper {
     grid-area: 3/1/4/6;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: gray;
-    height: 400px;
+}
+
+#mapid {
+    /* background: gray; */
+    height: 200px;
+    width: 400px;
+    padding: 2rem;
 }
 
 /* .map img {
@@ -105,8 +118,9 @@ header {
 }
 
 .info p {
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     margin-right: 2rem;
+    font-size: 1.3rem;
 }
 
 
@@ -216,6 +230,25 @@ footer img {
     padding: 1rem 0;
 }
 
+@media(max-width: 599px) {
+    .login__grid {
+        display: flex;
+        height: 100%;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login__form {
+        order: 1;
+    }
+
+    .login__info {
+        order: 0;
+    }
+    
+}
+
 
 /* Contact Page */
 
@@ -292,11 +325,27 @@ footer img {
 }
 
 
+/* Home page media queries */
+
+@media(max-width: 599px) {
+
+}
+
+
 a {
     text-decoration: none;
     color: inherit;
+    font-family: 'Raleway',
+    sans-serif;
 }
 
 h1 {
     font-size: 3rem;
+    font-family: 'Raleway',
+    sans-serif;
+}
+
+* {
+    font-family: 'Raleway',
+    sans-serif;
 }

@@ -20,4 +20,8 @@ router.get('/gallery', (req, res, next) => {
     res.render('gallery');
 });
 
+router.get('/amenities', (req, res, next) => {
+    res.render('amenities');
+});
+
 module.exports = router;
