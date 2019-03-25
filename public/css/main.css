@@ -56,6 +56,7 @@ header {
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 4rem;
 }
 
 .banner>h1 {
@@ -95,6 +96,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 2rem;
 }
 
 #mapid {
@@ -128,7 +130,7 @@ header {
 
 footer {
     grid-area: 4/1/5/13;
-    /* position: fixed; */
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -137,6 +139,8 @@ footer {
     justify-content: space-between;
     color: white;
     background-color: rgb(160, 160, 160);
+    margin-top: 4rem;
+    padding: 1rem 0;
 }
 
 .footer__address {
