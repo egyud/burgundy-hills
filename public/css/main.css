@@ -1,18 +1,6 @@
-.grid-container {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: auto;
-}
-
 /* header stuff */
 
 header {
-    /* position: fixed;
-    top: 0;
-    left: 0; 
-    width: 100%; */
-    grid-area: 1/1/2/13;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,17 +27,9 @@ header {
     background-color: gray;
 }
 
-@media(max-width: 599px) {
-    .grid-container {
-        display: flex;
-        flex-flow: column;
-    }
-}
-
 /* banner stuff */
 
 .banner {
-    grid-area: 1/1/3/13;
     background: url('../images/building.jpg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -92,7 +72,6 @@ header {
 /* other */
 
 .map-wrapper {
-    grid-area: 3/1/4/6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +92,6 @@ header {
 } */
 
 .info {
-    grid-area: 3/6/4/13;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +107,6 @@ header {
 /* footer */
 
 footer {
-    grid-area: 4/1/5/13;
     position: relative;
     bottom: 0;
     left: 0;
