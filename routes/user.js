@@ -12,6 +12,10 @@ router.get('/login', (req, res, next) => {
     res.render('login');
 });
 
+router.get('/register', (req, res) => {
+    res.render('register')
+})
+
 router.get('/contactus', (req, res, next) => {
     res.render('contact');
 });
