@@ -128,7 +128,7 @@ header {
 
 footer {
     grid-area: 4/1/5/13;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     right: 0;
@@ -160,6 +160,28 @@ footer img {
 
 .footer__hours li {
     font-weight: 300;
+}
+
+@media (max-width: 599px) {
+    footer {
+        flex-flow: column;
+        font-size: 1.1rem;
+    }
+
+    .footer__address {
+        flex-flow: row;
+        margin-bottom: 1rem;
+    }
+
+    .footer__address > p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    footer img {
+        max-width: 200px;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Log in form */
