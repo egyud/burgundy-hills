@@ -4,6 +4,10 @@ const bcrypt = require('bcryptjs');
 
 const User = require('../models/User');
 
+router.post('/login', (req, res) => {
+  
+})
+
 router.post('/register', (req, res) => {
   const { fullName, email, password } = req.body;
   

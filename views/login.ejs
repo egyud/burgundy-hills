@@ -4,7 +4,7 @@
     <%- include('includes/navigation.ejs') %>
     <div class="login__grid">
         <h1>Resident Portal</h1>
-        <form class="login__form" action="" method="POST">
+        <form class="login__form" action="http://localhost:5000/api/users/login" method="POST">
             <input type="email" name="email" id="" placeholder="Email">
             <input type="password" name="password" id="" placeholder="Password">
             <button type="submit">Sign In</button>
