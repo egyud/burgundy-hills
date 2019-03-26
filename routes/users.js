@@ -1,11 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const passport = require('passport');
 
 const User = require('../models/User');
 
 router.post('/login', (req, res) => {
   const { email, password } = req.body;
+
+  passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    successFlash: 'You are now logged in',
+    failureFlash: 'Invalid username or password'
+  })(req, res, next);
 })
 
 router.post('/register', (req, res) => {
