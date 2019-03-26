@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 
 const db = require('./config/keys').mongoURI;
 
-const userRoutes = require('./routes/user');
+const homeRoutes = require('./routes/home');
+const userRoutes = require('./routes/users');
 
 const app = express();
 
@@ -14,7 +15,12 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(userRoutes);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(homeRoutes);
+
+app.use('/api/users', userRoutes);
 
 mongoose.connect(db, {useNewUrlParser: true})
     .then(() => console.log('Connected to MongoDB'))
