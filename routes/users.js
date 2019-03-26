@@ -3,20 +3,35 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
+const ValidateRegisterInput = require('../validation/register');
+const ValidateLoginInput = require('../validation/login');
+
 const User = require('../models/User');
 
 router.post('/login', (req, res) => {
-  const { email, password } = req.body;
+  const { errors, isValid } = ValidateLoginInput(req.body);
 
-  passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login',
-    successFlash: 'You are now logged in',
-    failureFlash: 'Invalid username or password'
-  })(req, res, next);
+  if (!isValid) {
+    console.log(errors);
+    res.render('login', {errors})
+  } else {
+    passport.authenticate('local', {
+      successRedirect: '/',
+      failureRedirect: '/login',
+      successFlash: 'You are now logged in',
+      failureFlash: 'Invalid username or password'
+    })(req, res, next);
+  }
+
 })
 
 router.post('/register', (req, res) => {
+
+  const { errors, isValid } = ValidateRegisterInput(req.body);
+  if (!isValid) {
+    console.log(errors);
+    res.render('register', {errors})
+  }
   const { fullName, email, password } = req.body;
   
   User.findOne({email: email})
