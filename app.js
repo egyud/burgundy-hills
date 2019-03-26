@@ -4,6 +4,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const session = require('express-session');
+const flash = require('connect-flash');
+
 
 const db = require('./config/keys').mongoURI;
 
@@ -21,6 +24,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: false
+}))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(flash());
+
 
 app.use(homeRoutes);
 

@@ -8,7 +8,7 @@ const ValidateLoginInput = require('../validation/login');
 
 const User = require('../models/User');
 
-router.post('/login', (req, res) => {
+router.post('/login', (req, res, next) => {
   const { errors, isValid } = ValidateLoginInput(req.body);
 
   if (!isValid) {
