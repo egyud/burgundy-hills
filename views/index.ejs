@@ -7,25 +7,28 @@
 
 <body>
         <%- include('includes/navigation.ejs') %>
-        <section class="banner">
-            <h1>Welcome to Burgundy Hills Apartments</h1>
-            <div>
-                <button class="banner__button">Apply Now</button>
-                <a href="/login">
-                    <button class="banner__button">
-                        <p>Resident Login</p>
-                        <ul>
-                            <li>Make Online Payments</li>
-                            <li>Schedule Maintenance</li>
-                            <li>Other stuff and things</li>
-                        </ul>
-                    </button>
-                </a>
-            </div>
-        </section>
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-6 col-lg-8 mb-3">
+        <div id="page-container">
+            <div id="content-wrapper">
+
+                <section class="banner">
+                    <h1>Welcome to Burgundy Hills Apartments</h1>
+                    <div>
+                        <button class="banner__button">Apply Now</button>
+                        <a href="/login">
+                            <button class="banner__button">
+                                <p>Resident Login</p>
+                                <ul>
+                                    <li>Make Online Payments</li>
+                                    <li>Schedule Maintenance</li>
+                                    <li>Other stuff and things</li>
+                                </ul>
+                            </button>
+                        </a>
+                    </div>
+                </section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-8 mb-3">
                             <main class="info">
                                 <p>
                                     Located within minutes of restaurants, shopping, the Cincinnati/Northern Kentucky International
@@ -40,14 +43,15 @@
                                 </p>
                             </main>
                         </div>
-                <div class="col-md-6 col-lg-4 mb-3">
-                    <div class="map-wrapper">
-                        <div id="mapid">
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="map-wrapper">
+                                <div id="mapid">
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
-                
             </div>
+            <%- include('includes/footer.ejs') %>
         </div>
-        
-<%- include('includes/footer.ejs') %>
