@@ -128,7 +128,7 @@ footer {
 }
 
 footer img {
-    max-width: 130px;
+    max-width: 180px;
     height: auto;
     padding: 0.5rem auto;
 }
@@ -146,7 +146,7 @@ footer img {
 @media (max-width: 599px) {
     footer {
         flex-flow: column;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .footer__address {
@@ -351,4 +351,11 @@ h1 {
 * {
     font-family: 'Raleway',
     sans-serif;
+}
+
+ul,li { 
+    list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0; 
 }
