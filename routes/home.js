@@ -28,4 +28,8 @@ router.get('/amenities', (req, res, next) => {
     res.render('amenities');
 });
 
+router.get('/residentPortal', (req, res) => {
+    res.render('resPortal');
+})
+
 module.exports = router;

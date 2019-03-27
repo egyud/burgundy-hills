@@ -16,7 +16,7 @@ router.post('/login', (req, res, next) => {
     res.render('login', {errors})
   } else {
     passport.authenticate('local', {
-      successRedirect: '/',
+      successRedirect: '/residentPortal',
       failureRedirect: '/login',
       successFlash: 'You are now logged in',
       failureFlash: 'Invalid username or password'
