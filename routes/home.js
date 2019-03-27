@@ -32,4 +32,8 @@ router.get('/residentPortal', (req, res) => {
     res.render('resPortal');
 })
 
+router.get('/maintRequest', (req, res) => {
+    res.render('maintReq');
+})
+
 module.exports = router;
