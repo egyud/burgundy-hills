@@ -44,6 +44,7 @@ header {
     color: white;
     text-shadow: 2px 2px 5px black;
     margin-top: 4.5rem;
+    text-align: center;
 }
 
 .banner__button {
@@ -69,6 +70,15 @@ header {
     font-size: .8rem;
 }
 
+@media(max-width: 712px) {
+    /* Need to make banner buttons center */
+    .banner__button__wrapper {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+    }
+}
 /* other */
 
 .map-wrapper {
