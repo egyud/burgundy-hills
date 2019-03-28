@@ -379,6 +379,15 @@ ul,li {
     /* do this in higher sizes for smaller screens */
 }
 
+@media(max-width: 599px) {
+    #content-wrapper {
+        padding-bottom: 22rem;
+        /* do this in higher sizes for smaller screens */
+    }
+}
+
+
+
 /* Used for navbar background color and white font */
 .bg-bha {
     background-color: rgb(160, 160, 160);
