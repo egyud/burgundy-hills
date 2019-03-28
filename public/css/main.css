@@ -369,3 +369,8 @@ ul,li {
     /* do this in higher sizes for smaller screens */
 }
 
+/* Used for navbar background color and white font */
+.bg-bha {
+    background-color: rgb(160, 160, 160);
+    color: white;
+}
