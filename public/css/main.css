@@ -393,3 +393,27 @@ ul,li {
     background-color: rgb(160, 160, 160);
     color: white;
 }
+
+@media(min-width: 575px) {
+    .portal-wrapper {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+
+    .card {
+        max-width: 33%;
+        /* display: inline-block; */
+
+    }
+
+    .portal-btn {
+        /* margin-top: auto 0; */
+    }
+
+    .card-edit {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+}
