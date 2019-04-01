@@ -421,10 +421,12 @@ ul,li {
 /* Amenities Page */
 
 .amenities-list {
-    background-color: rgb(160, 160, 160);
+    /* background-color: rgb(160, 160, 160); */
     /* max-width: 30%; */
     /* margin: 0 auto; */
     padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .amenities-list > li {
@@ -436,6 +438,10 @@ ul,li {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
+}
+
+.pet-policy {
+    margin-top: 2rem;
 }
 
 
