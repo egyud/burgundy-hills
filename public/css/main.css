@@ -417,3 +417,29 @@ ul,li {
         justify-content: space-between;
     }
 }
+
+/* Amenities Page */
+
+.amenities-list {
+    background-color: rgb(160, 160, 160);
+    /* max-width: 30%; */
+    /* margin: 0 auto; */
+    padding: 1rem;
+}
+
+.amenities-list > li {
+    list-style-type: square;
+    padding-left: 2rem;
+}
+
+.amenities-wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+@media(max-width: 768qpx) {
+    .amenities-wrapper {
+        flex-flow: column;
+    }
+}
