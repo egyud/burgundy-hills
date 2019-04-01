@@ -401,7 +401,7 @@ ul,li {
         justify-content: space-between;
     }
 
-    .card {
+    .portal-wrapper > .card {
         max-width: 33%;
         /* display: inline-block; */
 
@@ -437,6 +437,7 @@ ul,li {
     flex-flow: row;
     justify-content: space-around;
 }
+
 
 @media(max-width: 768qpx) {
     .amenities-wrapper {
