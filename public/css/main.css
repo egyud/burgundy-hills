@@ -407,9 +407,9 @@ ul,li {
 
     }
 
-    .portal-btn {
-        /* margin-top: auto 0; */
-    }
+    /* .portal-btn {
+        margin-top: auto 0;
+    } */
 
     .card-edit {
         display: flex;
@@ -443,4 +443,16 @@ ul,li {
     .amenities-wrapper {
         flex-flow: column;
     }
+}
+
+/* Floorplans Pages */
+
+.floorplan-wrapper {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.floorplan-wrapper > img {
+    max-width: 100%;
+    height: auto;
 }
