@@ -6,13 +6,28 @@
         <div id="content-wrapper">
             <div class="login__grid">
                 <h1>Resident Portal</h1>
-                <form class="login__form" action="http://localhost:5000/api/users/login" method="POST">
+                <!-- <form class="login__form" action="http://localhost:5000/api/users/login" method="POST">
                     <input type="email" name="email" id="" placeholder="Email">
                     <input type="password" name="password" id="" placeholder="Password">
                     <button type="submit">Sign In</button>
                     <a href="">Forgot password?</a>
                     <a href="/register">Click here to register.</a>
-                    <a href="">Send Verification Email</a>
+                    <a href="">Send Verification Email</a> -->
+                </form>
+                <form action="http://localhost:5000/api/users/login" method="POST" class="login__form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" name="email" id="loginEmail" class="form-control" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" name="password" id="loginPassword" class="form-control" placeholder="password">
+                    </div>
+                    <div class="login-btn-group">
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                        <a href="/register" class="btn btn-outline-primary ml-2">Register</a>
+                    </div>
+                    <a href="" class="btn btn-info mt-2">Forgot Password?</a>
                 </form>
                 <section class="login__info">
                     <h3>Make Payments</h3>

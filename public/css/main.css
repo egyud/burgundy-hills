@@ -218,18 +218,23 @@ footer img {
     margin-bottom: 0.7rem;
 }
 
-.login__form > button {
+/* .login__form > button {
     padding: 0.85rem 1rem;
     background-color: blue;
     color: white;
     margin-bottom: 0.2rem;
+} */
+
+.login-btn-group {
+    display: flex;
+    flex-flow: row;
 }
 
-.login__form > a {
+/* .login__form > a {
     color: #0000EE;
     font-size: 0.9rem;
     padding-top: 0.2rem;
-}
+} */
 
 .login__info {
     grid-area: 2/2/3/3;
