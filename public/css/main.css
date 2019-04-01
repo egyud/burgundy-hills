@@ -391,6 +391,9 @@ ul,li {
     }
 }
 
+.portal-wrapper > .card {
+    margin-bottom: 2rem;
+}
 
 
 /* Used for navbar background color and white font */
