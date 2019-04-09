@@ -4,12 +4,24 @@ const express = require('express');
 
 const router = express.Router();
 
+const isLoggedIn = (req, res, next) => {
+    if (req.user) {
+        next();
+    } else {
+        res.redirect('/login');
+    }
+}
+
 router.get('/', (req, res, next) => {
     res.render('index');
 });
 
 router.get('/login', (req, res, next) => {
-    res.render('login');
+    if (!req.user) {
+        res.render('login');
+    } else {
+        res.redirect('/residentPortal');
+    }
 });
 
 router.get('/register', (req, res) => {
@@ -40,7 +52,7 @@ router.get('/amenities', (req, res) => {
     res.render('amenities');
 });
 
-router.get('/residentPortal', (req, res) => {
+router.get('/residentPortal', isLoggedIn, (req, res) => {
     res.render('resPortal');
 });
 
