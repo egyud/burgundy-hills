@@ -438,14 +438,16 @@ ul,li {
 }
 
 .amenities-list > li {
-    list-style-type: square;
     padding-left: 2rem;
+    border-left: none;
+    border-right: none;
 }
 
 .amenities-wrapper {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
+    margin-top: 3rem;
 }
 
 .pet-policy {
