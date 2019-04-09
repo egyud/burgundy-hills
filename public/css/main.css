@@ -27,6 +27,11 @@ header {
     background-color: gray;
 }
 
+.active {
+    background-color: rgb(80, 80, 80);
+    height: 100%;
+}
+
 /* banner stuff */
 
 .banner {

@@ -7,9 +7,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="/amenities" class="nav-link">Amenities</a>
+                        <a href="/amenities" class="nav-link <%= path === '/amenities' ? 'active' : '' %>">Amenities</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown <%= path === '/floorplans' ? 'active' : '' %>">
                         <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Floorplans</a>
                         <div class="dropdown-menu">
                             <a href="/vinyard" class="dropdown-item">1 Bed/1 Bath</a>
@@ -18,16 +18,16 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="/login" class="nav-link">Residents</a>
+                        <a href="/login" class="nav-link <%= path === '/login' || path === '/residentPortal' ? 'active' : '' %>">Residents</a>
                     </li>
                     <li class="nav-item">
                         <a href="/apply" class="nav-link">Apply</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/gallery" class="nav-link">Photos</a>
+                        <a href="/gallery" class="nav-link <%= path === '/gallery' ? 'active' : '' %>">Photos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/contactus" class="nav-link">Contact Us</a>
+                        <a href="/contactus" class="nav-link <%= path === '/contactus' ? 'active' : '' %>">Contact Us</a>
                     </li>
                 </ul>
             </div>
