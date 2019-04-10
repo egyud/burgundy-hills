@@ -26,7 +26,8 @@ exports.getLogin = (req, res, next) => {
 
 exports.getRegister = (req, res) => {
     res.render('register', {
-        pageTitle: 'Create An Account'
+        pageTitle: 'Create An Account',
+        path: '/register'
     })
 };
 
