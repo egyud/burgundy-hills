@@ -1,95 +1,40 @@
-const path = require('path');
-
 const express = require('express');
 
 const router = express.Router();
 
-const isLoggedIn = (req, res, next) => {
-    if (req.user) {
-        next();
-    } else {
-        res.redirect('/login');
-    }
-}
+const navController = require('../controllers/nav');
 
-router.get('/', (req, res, next) => {
-    res.render('index', {
-        pageTitle: 'Burgundy Hills Apartments',
-        path: ''
-    });
-});
+// GET /
+router.get('/', navController.getIndex);
 
-router.get('/login', (req, res, next) => {
-    if (!req.user) {
-        res.render('login', {
-            pageTitle: 'Resident Portal',
-            path: '/login'
-        });
-    } else {
-        res.redirect('/residentPortal');
-    }
-});
+// GET /login
+router.get('/login', navController.getLogin);
 
-router.get('/register', (req, res) => {
-    res.render('register', {
-        pageTitle: 'Create An Account'
-    })
-});
+// GET /register
+router.get('/register', navController.getRegister);
 
-router.get('/contactus', (req, res) => {
-    res.render('contact', {
-        pageTitle: 'Contact Us',
-        path: '/contactus'
-    });
-});
+// GET /contactus
+router.get('/contactus', navController.getContact);
 
-router.get('/vinyard', (req, res) => {
-    res.render('vinyard', {
-        pageTitle: 'Floorplans: The Vineyard',
-        path: '/floorplans'
-    });
-});
+// GET /vineyard
+router.get('/vineyard', navController.getVineyard);
 
-router.get('/ivyview', (req, res) => {
-    res.render('ivyview', {
-        pageTitle: 'Floorplans: The Ivyview',
-        path: '/floorplans'
-    });
-});
+// GET /ivyview
+router.get('/ivyview', navController.getIvyview);
 
-router.get('/vintage', (req, res) => {
-    res.render('vintage', {
-        pageTitle: 'Floorplans: The Vintage',
-        path: '/floorplans'
-    });
-});
+// GET /vintage
+router.get('/vintage', navController.getVintage);
 
-router.get('/gallery', (req, res) => {
-    res.render('gallery', {
-        pageTitle: 'Photo Gallery',
-        path: '/gallery'
-    });
-});
+// GET /gallery
+router.get('/gallery', navController.getGallery);
 
-router.get('/amenities', (req, res) => {
-    res.render('amenities', {
-        pageTitle: 'Amenities',
-        path: '/amenities'
-    });
-});
+// GET /amenities
+router.get('/amenities', navController.getAmenities);
 
-router.get('/residentPortal', isLoggedIn, (req, res) => {
-    res.render('resPortal', {
-        pageTitle: 'Resident Portal',
-        path: '/residentPortal'
-    });
-});
+// GET /residentPortal
+router.get('/residentPortal', navController.isLoggedIn, navController.getResPortal);
 
-router.get('/maintRequest', (req, res) => {
-    res.render('maintReq', {
-        pageTitle: 'Maintenance Request',
-        path: ''
-    });
-});
+// GET /maintRequest
+router.get('/maintRequest', navController.getMaintenanceForm);
 
 module.exports = router;
