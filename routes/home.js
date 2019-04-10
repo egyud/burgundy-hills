@@ -10,6 +10,9 @@ router.get('/', navController.getIndex);
 // GET /login
 router.get('/login', navController.getLogin);
 
+// GET /logout
+router.get('/logout', navController.getLogout);
+
 // GET /register
 router.get('/register', navController.getRegister);
 

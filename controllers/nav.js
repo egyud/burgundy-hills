@@ -24,6 +24,11 @@ exports.getLogin = (req, res, next) => {
     }
 };
 
+exports.getLogout = (req, res) => {
+    req.logout();
+    res.redirect('/login');
+}
+
 exports.getRegister = (req, res) => {
     res.render('register', {
         pageTitle: 'Create An Account',
