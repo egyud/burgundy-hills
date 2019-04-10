@@ -113,9 +113,21 @@ header {
 }
 
 .info p {
-    line-height: 1.5rem;
+    line-height: 1.3rem;
+    margin-top: 2rem;
     margin-right: 2rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+}
+
+.carousel-item {
+    color: white;
+    background: rgb(80, 80, 80);
+    text-align: center;
+    padding: 1rem;
+}
+
+.carousel-item span {
+    font-size: 0.8rem;
 }
 
 
