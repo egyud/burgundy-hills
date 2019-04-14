@@ -124,11 +124,17 @@ header {
     background: rgb(80, 80, 80);
     text-align: center;
     padding: 1rem;
+    border-left: 1rem solid rgb(160, 160, 160);
+    border-right: 1rem solid rgb(160, 160, 160);
 }
 
 .carousel-item span {
     font-size: 0.8rem;
 }
+
+/* .quote {
+    font-size: 4rem;
+} */
 
 
 /* footer */
@@ -467,13 +473,26 @@ ul,li {
 }
 
 .pet-policy {
-    margin-top: 2rem;
+    margin: 2rem auto 0;
+    max-width: 50%;
+}
+
+.amenities-card {
+    width: 40%;
 }
 
 
-@media(max-width: 768qpx) {
+@media(max-width: 768px) {
     .amenities-wrapper {
         flex-flow: column;
+    }
+
+    .pet-policy {
+        max-width: 100%;
+    }
+
+    .amenities-card {
+        width: 100%;
     }
 }
 
