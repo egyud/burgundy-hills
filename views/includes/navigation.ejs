@@ -6,8 +6,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="/amenities" class="nav-link <%= path === '/amenities' ? 'active' : '' %>">Amenities</a>
+                    <li class="nav-item <%= path === '/amenities' ? 'active' : '' %>">
+                        <a href="/amenities" class="nav-link">Amenities</a>
                     </li>
                     <li class="nav-item dropdown <%= path === '/floorplans' ? 'active' : '' %>">
                         <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Floorplans</a>
@@ -17,17 +17,17 @@
                             <a href="/vintage" class="dropdown-item">3 Beds/2 Baths</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a href="/login" class="nav-link <%= path === '/login' || path === '/residentPortal' ? 'active' : '' %>">Residents</a>
+                    <li class="nav-item <%= path === '/login' || path === '/residentPortal' ? 'active' : '' %>">
+                        <a href="/login" class="nav-link">Residents</a>
                     </li>
                     <li class="nav-item">
                         <a href="/apply" class="nav-link">Apply</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/gallery" class="nav-link <%= path === '/gallery' ? 'active' : '' %>">Photos</a>
+                    <li class="nav-item <%= path === '/gallery' ? 'active' : '' %>">
+                        <a href="/gallery" class="nav-link">Photos</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/contactus" class="nav-link <%= path === '/contactus' ? 'active' : '' %>">Contact Us</a>
+                    <li class="nav-item <%= path === '/contactus' ? 'active' : '' %>">
+                        <a href="/contactus" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
             </div>

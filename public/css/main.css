@@ -32,6 +32,16 @@ header {
     height: 100%;
 }
 
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 /* banner stuff */
 
 .banner {
