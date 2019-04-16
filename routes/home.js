@@ -40,4 +40,7 @@ router.get('/residentPortal', navController.isLoggedIn, navController.getResPort
 // GET /maintRequest
 router.get('/maintRequest', navController.getMaintenanceForm);
 
+// GET /underConstruction
+router.get('/underConstruction', navController.getUnderConstruction);
+
 module.exports = router;

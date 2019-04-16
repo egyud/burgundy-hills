@@ -91,3 +91,10 @@ exports.getMaintenanceForm = (req, res) => {
         path: ''
     });
 };
+
+exports.getUnderConstruction = (req, res) => {
+    res.render('working', {
+        path: '',
+        pageTitle: 'Page Under Construction'
+    })
+}
