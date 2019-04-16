@@ -46,7 +46,7 @@ mongoose.connect(db, {useNewUrlParser: true})
     .catch(err => console.log(err));
 
 app.use((req, res, next) => {
-    res.status(404).render('404page', {path: ''});
+    res.status(404).render('404page', {path: '', pageTitle: '404 Page Not Found'});
 });
 
 app.listen(5000, () => console.log('Server started on port 5000'));
