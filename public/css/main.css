@@ -42,6 +42,10 @@ header {
     padding-bottom: 0.5rem;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
 /* banner stuff */
 
 .banner {
