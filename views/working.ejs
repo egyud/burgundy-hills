@@ -1,10 +1,16 @@
-<%- include('includes/head.ejs') %>
-</head>
+<%- include('./includes/head.ejs') %> 
+<%- include('./includes/navigation.ejs') %>
+  <div id="page-container">
+    <div id="content-wrapper">
+      <div class="container">
+        <h1 class="mt-5">This page is currently under construction.</h1>
 
-<body>
-    <%- include('includes/navigation.ejs') %>
-    <h1>This page is currently under construction.</h1>
+        <div class="constr-img-wrapper">
+          <img class="construction-img" src="/images/construction.jpg" alt="Construction workers">
+        </div>
+      </div>
 
-    <img src="/public/images/construction.jpg" alt="Construction workers">
-    
-    <%- include('includes/footer.ejs') %>
+    </div>
+    <%- include('./includes/footer.ejs') %>
+  </div>
+
