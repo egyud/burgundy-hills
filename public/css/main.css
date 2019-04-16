@@ -504,6 +504,10 @@ ul,li {
     width: 40%;
 }
 
+.disclaimer {
+    margin-top: 1rem;
+}
+
 
 @media(max-width: 768px) {
     .amenities-wrapper {
