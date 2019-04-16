@@ -383,8 +383,10 @@ footer img {
 }
 
 .photo__grid img {
-    width: 255px;
-    height: 130px;
+    width: 259px;
+    height: 134px;
+    margin: 0 auto;
+    border: 4px double black;
 }
 
 
