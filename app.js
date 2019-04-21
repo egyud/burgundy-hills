@@ -38,7 +38,7 @@ app.use(homeRoutes);
 
 app.use('/api/users', userRoutes);
 
-mongoose.connect(db, {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_URI || db, {useNewUrlParser: true})
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.log(err));
 
