@@ -1,10 +1,12 @@
 const express = require('express');
 
+const helmet = require('helmet');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
+
 
 
 const PORT = process.env.PORT || 5000;
@@ -17,6 +19,8 @@ const userRoutes = require('./routes/users');
 require('./config/passport')(passport);
 
 const app = express();
+
+app.use(helmet());
 
 app.set('view engine', 'ejs');
 
