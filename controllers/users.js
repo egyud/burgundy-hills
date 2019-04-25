@@ -16,9 +16,7 @@ exports.loginUser = (req, res, next) => {
   } else {
     passport.authenticate('local', {
       successRedirect: '/residentPortal',
-      failureRedirect: '/login',
-      successFlash: 'You are now logged in',
-      failureFlash: 'Invalid username or password'
+      failureRedirect: '/login'
     })(req, res, next);
   }
 
